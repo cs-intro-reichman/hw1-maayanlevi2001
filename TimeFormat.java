@@ -13,20 +13,29 @@ public class TimeFormat {
 
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 
-        // Replace this comment with the rest of your code
-		if (hours >= 0 && hours < 13) {
-			if ( minutes < 10 ) {
-				System.out.println(hours + ":0" + minutes + " AM");
-			} else {
-				System.out.println(hours + ":" + minutes + " AM");
-			}
-		} else {
-			if ( minutes < 10 ) {
-				System.out.println(hours + ":0" + minutes + " PM");
-			} else {
-				System.out.println(hours - 12 + ":" + minutes + " PM");
-			}
-		}
-	}
-}
+        if (hours >= 0 & hours < 12 ) {
+            // midnight
+            if (minutes < 10) {
+                System.out.println(hours + ":0" + minutes + " AM");
+            } else {
+                System.out.println(hours + ":" + minutes + " AM");
+            }
+        } else if (hours == 12) {
+            // noon
+            if (minutes < 10) {
+                System.out.println(hours + ":0" + minutes + " PM");
+            } else {
+                System.out.println(hours + ":" + minutes + " PM");
+            }
+        } else {
+            // Hours in PM ,not midnight
+            if (minutes < 10) {
+                System.out.println((hours - 12) + ":0" + minutes + " PM");
+            } else {
+                System.out.println((hours - 12) + ":" + minutes + " PM");
+            }
+        }
+    }
+}	
+
 
