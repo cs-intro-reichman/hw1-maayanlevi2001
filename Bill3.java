@@ -9,8 +9,8 @@ public class Bill3 {
 		// cal each diner pay 
 		double dinerPayRounded = Math.ceil( (double) bill / 3);
         // print msg
-		System.out.println("Dear " + diner1 + ", " +
-		 diner2 + ", and " + diner3 + ": pay " + dinerPayRounded +
+		System.out.println("Dear " + diner3 + ", " +
+		 diner2 + ", and " + diner1 + ": pay " + dinerPayRounded +
 		  " Shekels each.");   
 	}
 }
